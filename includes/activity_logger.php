@@ -27,6 +27,7 @@
             ) VALUES (?,?,?,?,?,?)
             ");
            
+            
 
        }catch(PDOException $e){
            error_log("Activity Log Error: " . $e->getMessage());
