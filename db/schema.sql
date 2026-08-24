@@ -14,6 +14,6 @@ CREATE TABLE IF NOT EXISTS activity_logs(
 
 
     -- timestamps
-    activity_log_created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    activity_log_created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 
 );

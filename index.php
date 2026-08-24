@@ -1,7 +1,6 @@
 <?php
-require_once 'config/ config.php';
-require_once 'includes/ activity_logger-php';
-require_once __DIR__ . '/config/config.php';
+require_once 'config/config.php';
+require_once 'includes/activity-logger.php';
 
 
 // rest of your index.php code here
