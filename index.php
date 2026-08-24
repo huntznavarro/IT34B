@@ -1,6 +1,10 @@
 <?php
 require_once 'config/ config.php';
 require_once 'includes/ activity_logger-php';
+require_once __DIR__ . '/config/config.php';
+
+
+// rest of your index.php code here
 
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
     $action = trim($_POST['action'] ?? '');
