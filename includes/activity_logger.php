@@ -36,6 +36,8 @@
                 $user_agent
             ]);
 
+                return $success;
+
        } catch(PDOException $e){
 
            error_log("Activity Log Error: " . $e->getMessage());

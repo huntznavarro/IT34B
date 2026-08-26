@@ -1,4 +1,5 @@
 <?php
+
 require_once('config/config.php');
 
 $user_id = "root" ?? null;
