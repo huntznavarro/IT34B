@@ -1,13 +1,9 @@
 <?php
 
-        Function redirect($path){
-            header("Location: " . BASE_URL . "/" . $path);
-
-            exit;
-        }
-
-
-
+function redirect($path){
+    header("location: " . BASE_URL . $path);
+    exit;
+}
 
 function loginUser($pdo, $login, $password)
 {
@@ -62,4 +58,5 @@ function requireRole($role)
         die('Access denied.');
     }
 }
+
 ?>
