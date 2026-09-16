@@ -2,8 +2,9 @@
 session_start();
 
 require_once(__DIR__ . '/../includes/activity_logger.php');
+require_once(__DIR__ . '/functions.php');
 
-define('BASE_URL', 'http://localhost/it34b'); 
+define('BASE_URL', 'http://localhost/IT34B'); 
 
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'it34b_lab_db');

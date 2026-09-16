@@ -1,4 +1,5 @@
 <?php
+
 require_once('config/config.php');
 
 $user_id = "root" ?? null;
@@ -74,12 +75,3 @@ If($_SERVER['REQUEST_METHOD'] === 'POST'){
 
 
 ?>
-
- logActivity($pdo,$_SESSION['user_id'],$_SESSION['user_email'],'login','success');
-
- if(loginUser($pdo,$login,$password)){
-        echo 'Location: ' . BASE_URL . '/app/' .$_SESSION['user_role'] . '/index.php';
-        header('Location: ' . BASE_URL . '/app/' . $_SESSION['user_role'] . '/index.php');
-        exit;
-
-    }
