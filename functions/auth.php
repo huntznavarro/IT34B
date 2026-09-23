@@ -1,10 +1,5 @@
 <?php
 
-function redirect($path){
-    header("location:" . BASE_URL . $path);
-    exit;
-}
-
 function loginUser($pdo, $login, $password)
 {
     $sql = "
@@ -16,7 +11,7 @@ function loginUser($pdo, $login, $password)
             user_role
         FROM users
         WHERE user_email = :login
-           OR user_username = :login
+        OR user_username = :login
         LIMIT 1
     ";
 

@@ -1,6 +1,6 @@
 <?php
 require_once 'config/config.php';
-require_once 'config/functions.php';
+
 
 
 
@@ -15,10 +15,9 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     $login = trim($_POST['login'] ?? '');
     $password = $_POST['password'] ?? '';
 
-      
     $error = 'Invalid login credentials';
 
-        if( $log===''|| $password ===''){
+        if($login===''|| $password ===''){
         
         // log incomplte login attempt
         logActivity($pdo,
@@ -75,4 +74,5 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     </form>
 </body>
 </html>
+
 
