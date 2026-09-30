@@ -1,5 +1,4 @@
 <?php
-
 function loginUser($pdo, $login, $password)
 {
     $sql = "
@@ -28,12 +27,18 @@ function loginUser($pdo, $login, $password)
         return false;
     }
 
+    // check if user already has an active session
+    if(hasActiveUserSession($pdo,$user['user_id'])){
+        return 'active_session';
+    }
+    
     $_SESSION['user_id'] = $user['user_id'];
     $_SESSION['user_email'] = $user['user_email'];
     $_SESSION['user_username'] = $user['user_username'];
     $_SESSION['user_role'] = $user['user_role'];
 
-    $_SESSION['session_id'] = startUserSession($pdo);
+    $_SESSION['session_id'] = StartUserSession($pdo);
+
     return true;
 }
 

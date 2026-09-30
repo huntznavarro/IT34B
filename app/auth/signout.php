@@ -8,7 +8,7 @@ if(isset($_SESSION['user_id'])){
     'logout',
     'success'
     );
-}
+}   
 
 endUserSession($pdo);
 
