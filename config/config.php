@@ -1,9 +1,10 @@
 <?php
 session_start();
 
-require_once(__DIR__ . '/../includes/activity_logger.php');
-require_once(__DIR__ . '/functions.php');
-
+require_once(__DIR__ . '/../functions/activity.php');
+require_once(__DIR__ . '/../functions/auth.php');
+require_once(__DIR__ . '/../functions/redirect.php');
+require_once(__DIR__ . '/../functions/session.php');
 define('BASE_URL', 'http://localhost/IT34B'); 
 
 define('DB_HOST', 'localhost');
@@ -15,7 +16,7 @@ define('DB_PASS', '');
 try{
     $pdo =new PDO(
         "mysql:host=" . DB_HOST . ";dbname=" .
-         DB_NAME, DB_USER, DB_PASS,
+ DB_NAME, DB_USER, DB_PASS,
         [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
 
     );

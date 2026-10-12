@@ -1,14 +1,14 @@
 <?php
 require_once '../../config/config.php';
-require_once '../../config/functions.php';
+
 
 requireRole('admin');
 
- logActivity($pdo,$_SESSION['user_id'],
+logActivity($pdo,$_SESSION['user_id'],
         $_SESSION['user_email'],
         'view_activity_logs',
         'success'
- );
+);
 
  //activity#query 3
     $stmt = $pdo->query("
@@ -37,7 +37,7 @@ $activities = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <body>
     <h1>Welcome Admin</h1>
     <a href="../auth/signout.php">Sign Out</a> 
-    <table id="example" class="table table-striped" style="width:auto">
+   <table id="example" class="table table-striped" style="width:100%">
     <thead>
         <tr>
             <th>Record ID</th>
@@ -74,6 +74,7 @@ $activities = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <script>
     new DataTable('#example', {
         scrollY: '400px',
+         scrollX: true,
         autoWidth: false,
     });
 </script>

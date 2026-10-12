@@ -12,6 +12,6 @@ $success = LogActivity($pdo,$user_id,$user_email,'test_activity', 'success');
 }else{
 
     echo "Failed to insert activity log";
- }
+}
 
 ?>
