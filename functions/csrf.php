@@ -1,4 +1,4 @@
-wi<?php
+<?php
 
 //Generate CSRF Token
 function generateCsrfToken()
