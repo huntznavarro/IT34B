@@ -222,7 +222,7 @@ if ($section === 'activity-logs') {
 
                                 } else {
 
-                                    echo 'Ongoing';
+                                    echo 'kamolo ko dri';
 
                                 }
 
