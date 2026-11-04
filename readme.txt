@@ -172,3 +172,17 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 </html>
 
 
+define('BASE_URL','http://localhost/it34-boilerplate');
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome Manager</h1>
+    <a href="../auth/signout.php">Sign Out</a>    
+</body>
+</html>
