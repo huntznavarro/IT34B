@@ -80,7 +80,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     <br>
     <label>Password</label>
     <input type="password" name="password"required>
-    <br>
+    <br>x
     <button type="submit">Sign In</button>
 </form>
 

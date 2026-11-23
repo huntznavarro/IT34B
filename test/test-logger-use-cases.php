@@ -31,8 +31,8 @@ $buttons = [
             <td>
                 <form method="POST">
                     <input 
-                        type="hidden"  name="action"
-                         value="<?= htmlspecialchars($button) ?>"
+                    type="hidden"  name="action"
+                    value="<?= htmlspecialchars($button) ?>"
                     >
 
                     <button type="submit">Test</button>
@@ -47,7 +47,7 @@ $buttons = [
 If($_SERVER['REQUEST_METHOD'] === 'POST'){
         $action = $_POST ['action'] ?? "test_activity";
 
-       $status = 'success';
+    $status = 'success';
 
         $success =  LogActivity(
             $pdo,

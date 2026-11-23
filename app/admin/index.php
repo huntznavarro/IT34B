@@ -55,8 +55,8 @@ if ($action === 'export') {
     if ($section === 'activity-logs') {
 
         $stmt = $pdo->query("
-          SELECT *
-          FROM activity_logs 
+        SELECT *
+        FROM activity_logs 
             ORDER BY activity_log_created_at DESC
         ");
         $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -98,7 +98,7 @@ if ($action === 'export') {
         ");
         $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-          logActivity(
+        logActivity(
             $pdo,
             $_SESSION['user_id'],
             $_SESSION['user_email'],
@@ -123,7 +123,7 @@ if ($action === 'export') {
             }
     }   }
 
-      unset($r);
+    unset($r);
 
         exportCsv(
             'user_sessions',
